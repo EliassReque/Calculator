@@ -131,7 +131,13 @@
         value3 = TextBox1.Text
         operacion = value2
         primerNumero = Convert.ToDouble(value1)
-        segundoNumero = Convert.ToDouble(value3)
+        If (TextBox1.Text.Equals("")) Then
+            segundoNumero = primerNumero
+
+        Else
+            segundoNumero = Convert.ToDouble(value3)
+        End If
+
 
         Select Case (operacion)
             Case "+"
